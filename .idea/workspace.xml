@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f7f460b-b1ff-4cc6-9c31-bfa431c0b412" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab_PR2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/email/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PR_Laborator2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PR2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PR_Laborator2/gmail/JavaAppSentMail$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PR_Laborator2/gmail/JavaAppSentMail.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PR_Laborator2/gmail/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PR_Laborator2/gmail/ReceiveMail.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gmail/JavaAppSentMail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/email/SendingMail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gmail/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gmail/ReceiveMail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/email/ReceivingMail.java" afterDir="false" />
-    </list>
+    <list default="true" id="7f7f460b-b1ff-4cc6-9c31-bfa431c0b412" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -155,7 +141,7 @@
       <workItem from="1652211957760" duration="439000" />
       <workItem from="1652212410841" duration="3000" />
       <workItem from="1652212417703" duration="74000" />
-      <workItem from="1652245847017" duration="3614000" />
+      <workItem from="1652245847017" duration="3931000" />
     </task>
     <servers />
   </component>
