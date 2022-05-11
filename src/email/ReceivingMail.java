@@ -1,23 +1,25 @@
-package gmail;
+package email;
 
 import com.sun.mail.pop3.POP3Store;
 
-import javax.mail.*;
-import java.io.IOException;
+import javax.mail.Folder;
+import javax.mail.Message;
+import javax.mail.Session;
 import java.util.Properties;
 
-public class ReceiveMail {
+public class ReceivingMail {
 
-    public static void receiveEmail(String pop3Host, String storeType,
-                                    String username, String password) {
+    public static void receivingEmail(String pop3Host, String storeType, String UserName, String Password) {
         try {
-            //1)creeam obiectul sesiune
+
             Properties properties = new Properties();
+
+
             properties.put("mail.pop3.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
             properties.put("mail.pop3.socketFactory.fallback", "false");
             properties.put("mail.pop3.socketFactory.port", 995);
             properties.put("mail.pop3.port", 995);
-            properties.put("mail.pop3.username", username);
+            properties.put("mail.pop3.username", UserName);
             properties.put("mail.store.protocol", "pop3");
             properties.put("mail.pop3.ssl.protocols", "TLSv1.2");
             properties.put("mail.pop3.host", pop3Host);
@@ -27,19 +29,19 @@ public class ReceiveMail {
 
             Session emailSession = Session.getDefaultInstance(properties);
 
-            //2) cream obiectul store POP3 și ne conectam la serverul pop
+            //  create the POP3 store object and connect to the pop server
             POP3Store emailStore = (POP3Store) emailSession.getStore(storeType);
-            emailStore.connect(username, password);
+            emailStore.connect(UserName, Password);
 
-            //3) cream obiectul folder și il deschidem
+            //create the folder object and open it
             Folder emailFolder = emailStore.getFolder("INBOX");
             emailFolder.open(Folder.READ_ONLY);
 
-            //4) preluam mesajele din folder într-o matrice și le imprimam
+            //  take the messages from the folder into an array and print them
             Message[] messages = emailFolder.getMessages();
             for (int i = 0; i < messages.length; i++) {
                 Message message = messages[i];
-                System.out.println("*************************************");
+                System.out.println("******************************");
                 System.out.println("No. " + (i + 1));
                 System.out.println("Subject: " + message.getSubject());
                 System.out.println("From: " + message.getFrom()[0]);
@@ -49,19 +51,9 @@ public class ReceiveMail {
             emailFolder.close(false);
             emailStore.close();
 
-        } catch (IOException | MessagingException e) {
-            e.printStackTrace();
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
     }
 
-    public static void main(String[] args) {
-
-        String username = "anamaria.veq.sigmoid@gmail.com";
-        String password = "$igmoid000";
-        String host = "pop.gmail.com";
-        String mailStoreType = "pop3";
-
-        receiveEmail(host, mailStoreType, username, password);
-
-    }
-}  
+}
